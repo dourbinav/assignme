@@ -6,6 +6,7 @@ import Signup from "./Signup";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import DltTask from "./DltTask";
 import Error from "./Error";
+import Update from "./Update";
 function App() {
 
   const router=createBrowserRouter([
@@ -15,6 +16,7 @@ function App() {
     {path:'/search',element:<ViewTask />},
     {path:'/delete',element:<DltTask />},
     {path:'/add',element:<Task />},
+    {path:'/update/:title',element:<Update/>},
     {path:"*",errorElement:< Error />}
   ])
 
